@@ -1,0 +1,20 @@
+@mixin tab {
+    min-width: 768px;
+}
+
+@mixin desc {
+    min-width: 1200;
+}
+
+@mixin mob {
+    max-width: 767px;
+}
+
+@mixin retina {
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        @content
+    }
+}
+
