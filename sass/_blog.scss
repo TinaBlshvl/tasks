@@ -5,9 +5,6 @@
     margin-left: auto;
     min-width: 320px;
     max-width: 767px;
-    @include retina {
-        background-image: url(../imges/bg-mob-2x.jpg);
-    }
     
     @media screen and (min-width: 768px) {
         background-image: url(../imges/bg-tab-1x.jpg);
@@ -15,9 +12,6 @@
         margin-left: auto;
         min-width: 768px;
         max-width: 1199px;
-        @include retina {
-            background-image: url(../imges/bg-tab-2x.jpg);
-        }
     }
 
     @media screen and (min-width: 1280px) {
@@ -26,9 +20,6 @@
         margin-left: auto;
         min-width: 1280px;
         max-width: 1600px;
-        @include retina {
-            background-image: url(../imges/bg-desc-2x.jpg);
-        }
     }
 }
 
@@ -93,10 +84,30 @@ a {
     }
 }
 
-.blog-content {
+.blog-container {
     @media screen and (min-width: 1280px) {
-        display: flex;
+        display: none;
     }
+}
+
+// .blog-content {
+//     @media screen and (min-width: 1280px) {
+//         display: flex;
+//         justify-content: space-between;
+//     }
+// }
+
+.blog-container-desc {
+    @media screen and (max-width: 1279px) {
+        display: none;
+    }
+} 
+
+.blog__text-desc {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 24px;
 }
 
 .blog-title {
@@ -113,52 +124,102 @@ a {
     }
 
     @media screen and (min-width: 1280px) {
-        margin-left: 102px;
+        margin-left: 62px;
     }
 }
 
-.headset__photo-title {
+.blog__photo-title-desc {
+    @media screen and (max-width: 1279px) {
+        display: none;
+    }
     font-weight: 500;
-    font-size: 22px;
+    font-size: 56px;
+    line-height: 1;
+    color: #fff;
+    margin-bottom: 52px;
+
+    max-width: 692px;
+}
+
+.blog__child-desc {
+    margin-bottom: 24px;
+}
+
+.blog__photo-title {
+    font-weight: 500;
+    font-size: 24px;
     line-height: 1.16;
     color: #fff;
-
     margin-bottom: 16px;
-    
+
+    max-width: 692px;
+
     @media screen and (min-width: 768px) {
         font-size: 56px;
         line-height: 1;
     }
 
     @media screen and (min-width: 1280px) {
-        position: absolute;
-        right: 0;
-        max-width: 692px;
+        display: none;
     }
+}
+
+.blog__tab-content {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    position: relative;
 }
 
 .blog-photo {
     margin-bottom: 8px;
-
     @media screen and (min-width: 768px) {
         border-radius: 12px;
     }
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        margin-bottom: 16px;
+    }
+}
+
+.blog-container__desc {
+    display: flex;
+    justify-content: space-between;
 }
 
 .blog-text {
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
+
+    @media screen and (min-width: 768px) {
+        font-size: 24px;
+    }
 }
 
 .blog__text-name {
     color: #fff;
-    margin-bottom: 8px;
+    @media screen and (max-width: 767px) {
+        margin-bottom: 8px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        margin-bottom: 32px;
+        max-width: 132px;
+    }
 }
 
-.blog__text-date{
+.blog__text-date {
     color: #8D9289;
-    margin-bottom: 16px;
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+            max-width: 252px;
+    }
+
+    @media screen and (max-width: 1279px) {
+        margin-bottom: 16px;
+    }
 }
 
 .blog__text-text {
@@ -167,20 +228,29 @@ a {
     line-height: 1.18;
 
     color: #fff;
-
     margin-bottom: 8px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 24px;
+        line-height: 1.16;
+        max-width: 688px;
+
+        margin-bottom: 16px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        max-width: 692px;
+    }
 }
 
-.blog__headset-text {
-    position: relative;
+.blog__link-container {
+    text-align: end;
+    margin-bottom: 24px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 40px;
+    }
 }
+
 .blog__text-link {
     color: #86E543;
-    position: absolute;
-    right: 0;
-
-    margin-bottom: 24px;
 }
-
-
-
